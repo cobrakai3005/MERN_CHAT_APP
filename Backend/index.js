@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 dotenv.config("./.ennv");
 import { connectDb } from "./Database/index.js";
 import { server } from "./socket/socket.js";
+import path from "path";
 
 const PORT = process.env.PORT || 5000;
 
