@@ -30,7 +30,7 @@ app.use("/api/users", userRoute);
 app.use("/api/messages", messageRoute);
 
 app.use("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
+  res.sendFile(path.join(__dirname, "Frontend", "dist", "index.html"));
 });
 
 //Error Handler
