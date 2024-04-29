@@ -10,12 +10,12 @@ const __dirname = path.resolve();
 app.use(express.json({ limit: "16kb" }));
 app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use(express.static(path.join(__dirname, "/frontend/dist")));
-app.use(
-  cors({
-    origin: "http://localhost:3000",
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: "http://localhost:3000",
+//     credentials: true,
+//   })
+// );
 app.use(cookieParser());
 
 //routes import
@@ -30,7 +30,7 @@ app.use("/api/users", userRoute);
 app.use("/api/messages", messageRoute);
 
 app.use("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "Frontend", "dist", "index.html"));
+  res.sendFile(path.resolve(__dirname, "Frontend", "dist", "index.html"));
 });
 
 //Error Handler
