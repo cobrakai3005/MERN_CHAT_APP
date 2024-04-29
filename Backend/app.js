@@ -24,13 +24,13 @@ import messageRoute from "./Routes/message.route.js";
 import userRoute from "./Routes/user.route.js";
 import ApiError from "./utils/apiError.js";
 
-// Middleware to set the correct MIME type for JavaScript files
-app.use((req, res, next) => {
-  if (req.url.endsWith(".js")) {
-    res.setHeader("Content-Type", "application/javascript");
-  }
-  next();
-});
+// // Middleware to set the correct MIME type for JavaScript files
+// app.use((req, res, next) => {
+//   if (req.url.endsWith(".js")) {
+//     res.setHeader("Content-Type", "application/javascript");
+//   }
+//   next();
+// });
 
 //routes decleration
 app.use("/api/auth", authRoute);
